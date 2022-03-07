@@ -6,10 +6,9 @@ import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './Techn
 const Technologies: React.FC = () =>  (
   <Section id="tech">
     <SectionDivider divider />
-    <SectionTitle>Technologies</SectionTitle>
+    <SectionTitle>Tecnologias</SectionTitle>
     <SectionText>
-      Ive worked with a range a technologies in the web development world.
-      From Back-end To Design
+      Atualmente, acumulo conhecimentos do Front-End, UI/UX e o básico de Banco de Dados. 
     </SectionText>
     <List>
       <ListItem>
@@ -19,8 +18,9 @@ const Technologies: React.FC = () =>  (
         <ListContainer>
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
-            Experiece with <br />
-            React.js
+            Experiência com <br />
+            React.js, Next.js, <br/>
+            Typescript...
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -31,8 +31,8 @@ const Technologies: React.FC = () =>  (
         <ListContainer>
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            Node and Databases
+            Experiência com <br />
+            PostgresSQL
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -43,8 +43,8 @@ const Technologies: React.FC = () =>  (
         <ListContainer>
           <ListTitle>UI/UX</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            tools like Figma
+            Experiência com <br />
+            ferramentas como Figma
           </ListParagraph>
         </ListContainer>
       </ListItem>

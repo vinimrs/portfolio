@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .ts"
   },
   "dependencies": {
+    "gsap": "^3.9.1",
     "next": "12.1.0",
     "next-images": "^1.8.4",
     "next-react-svg": "^1.1.3",

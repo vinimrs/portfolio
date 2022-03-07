@@ -37,11 +37,9 @@ const Card: React.FC<CardProps> = ({
                     src={image}
                     role="img"
                     onMouseEnter={() => {
-                        console.log('enter');
                         setOpenVideo(true);
                     }}
                     onMouseLeave={() => {
-                        console.log('leave');
 
                         setOpenVideo(false);
                     }}
