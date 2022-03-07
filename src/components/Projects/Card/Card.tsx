@@ -31,7 +31,7 @@ const Card: React.FC<CardProps> = ({
     const [openVideo, setOpenVideo] = useState(false);
 
     return (
-        <S.CardDiv key={id} target="_blank">
+        <S.CardDiv  key={id} >
             <S.Card2>
                 <S.CardImage
                     src={image}
@@ -40,25 +40,18 @@ const Card: React.FC<CardProps> = ({
                         setOpenVideo(true);
                     }}
                     onMouseLeave={() => {
-
                         setOpenVideo(false);
                     }}
                 >
-                    <span>Hover to preview</span>
+                    <span onClick={() => setOpenVideo(!openVideo)}>Hover to preview</span>
                     {openVideo && (
-                        <video
-                            src={preview}
-                            className='video'
-                            autoPlay
-                            muted
-                        />
-                    )}
+                        <video src={preview} className="video" autoPlay muted loop />
+                    )} 
                 </S.CardImage>
                 <div style={{ width: '100%', padding: '24px 18px' }}>
                     <S.CardTitle>{title}</S.CardTitle>
                     <S.Text>{description}</S.Text>
-                    <S.LinksDiv
-                    >
+                    <S.LinksDiv>
                         <S.RepoLink href={source} target="_blank">
                             <AiFillGithub size="3rem" />
                             <span>Visualize o código</span>
