@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardDiv = styled.a`
+export const CardDiv = styled.div`
     max-width: 550px;
     background-image: ${props => props.theme.gradients.secondary1};
     border-radius: 20px;
@@ -75,43 +75,41 @@ export const CardImage = styled.div<{ src: string }>`
     }
 
     &:hover {
-        span {
-            opacity: 0;
-        }
+    span {
+        opacity: 0;
     }
+}
+
 
     @media ${props=> props.theme.breakpoints.lg} {
-        height: 300px;
-
+        height: 350px;
     }
 
     @media ${props=> props.theme.breakpoints.md} {
-        height: 250px;
-        span {
-            opacity: 0;
-            visibility: hidden;
-        }
+        height: 300px;
     }
 
     @media ${props=> props.theme.breakpoints.sm} {
         height: 250px;
+        span {
+            z-index: 99999;
+        }
 
+        &:hover {
+        span {
+            opacity: 1;
+        }
+    }
     }
 `;
 
 export const CardTitle = styled.h3`
     color: ${props => props.theme.colors.primary};
     font-size: ${props => props.theme.fonts.size['1xl']};
-    
-    /* @media ${props=> props.theme.breakpoints.lg} {
-        font-size: ${props => props.theme.fonts.size.lg};
-
-    } */
 
     @media ${props=> props.theme.breakpoints.md} {
         font-size: ${props => props.theme.fonts.size.lg};
     }
-
 `;
 
 export const Text = styled.p`

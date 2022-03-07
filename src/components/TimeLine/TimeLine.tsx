@@ -11,6 +11,7 @@ const Timeline: React.FC = () => {
   const carouselRef = useRef<HTMLUListElement>();
 
   const scroll = (node: HTMLElement, left: number) => {
+      if(!node) return;
     return node.scrollTo({ left, behavior: 'smooth' });
   }
 
@@ -18,7 +19,6 @@ const Timeline: React.FC = () => {
     e.preventDefault();
 
     if (carouselRef.current) {
-    
       const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length));
       
       scroll(carouselRef.current, scrollLeft);
@@ -46,11 +46,11 @@ const Timeline: React.FC = () => {
 
   return (
     <Section id="about">
-      <SectionTitle>About Me</SectionTitle>
+      <SectionTitle>Sobre mim</SectionTitle>
       <SectionText>
-      The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
+      Posso falar que sou a pessoa mais curiosa que conheço, desde que conheci esse mundo a cada dia fico mais apaixonado e motivado a aprender mais! Meu maior objetivo é aplicar meus conhecimentos em projetos práticos, igual esse aqui.
       </SectionText>
-      <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
+      <CarouselContainer id='gs_reveal' ref={carouselRef} onScroll={handleScroll}>
         <>
           {TimeLineData.map((item, index) => (
             <CarouselMobileScrollNode
@@ -100,7 +100,7 @@ const Timeline: React.FC = () => {
           ))}
         </>
       </CarouselContainer>
-      <CarouselButtons>
+      <CarouselButtons >
         {TimeLineData.map((item, index) => {
           return (
             <CarouselButton

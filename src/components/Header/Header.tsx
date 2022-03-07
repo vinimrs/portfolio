@@ -29,7 +29,12 @@ const Header: React.FC = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="#sobre">
+                    <Link href="#tech">
+                        <S.NavLink>Tecnologias</S.NavLink>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="#about">
                         <S.NavLink>Sobre</S.NavLink>
                     </Link>
                 </li>
@@ -38,11 +43,11 @@ const Header: React.FC = () => {
                 <S.SocialIcons href="https://github.com/vinir07">
                     <AiFillGithub size="2.5rem" />
                 </S.SocialIcons>
-                <S.SocialIcons href="https://instagram.com/vocedeveloper">
-                    <AiFillInstagram size="2.5rem" />
-                </S.SocialIcons>
                 <S.SocialIcons href="https://www.linkedin.com/in/vin%C3%ADcius-romualdo-5a9555219/">
                     <AiFillLinkedin size="2.5rem" />
+                </S.SocialIcons>
+                <S.SocialIcons href="https://instagram.com/vocedeveloper">
+                    <AiFillInstagram size="2.5rem" />
                 </S.SocialIcons>
             </S.Div3>
         </S.Container>

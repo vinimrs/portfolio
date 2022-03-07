@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import styled from 'styled-components';
 
 interface SectionProps {
@@ -20,6 +22,57 @@ interface ButtonProps {
     alt?: boolean;
 }
 
+export function loadScrollTrigger() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('#gs_reveal').forEach(function (elem: HTMLElement) {
+        hide(elem); // assure that the element is hidden when scrolled into view
+        console.log(elem);
+        ScrollTrigger.create({
+            trigger: elem,
+            onEnter: function () {
+                animateFrom(elem);
+            },
+            onEnterBack: function () {
+                animateFrom(elem, -1);
+            },
+            onLeave: function () {
+                hide(elem);
+            }, // assure that the element is hidden when scrolled into view
+        });
+    });
+}
+
+export function animateFrom(elem: HTMLElement, direction = 1) {
+    let x = 0;
+    let y = direction * 100;
+    if (elem.classList.contains('gs_reveal_fromLeft')) {
+        x = -100;
+        y = 0;
+    } else if (elem.classList.contains('gs_reveal_fromRight')) {
+        x = 100;
+        y = 0;
+    }
+    elem.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    elem.style.opacity = '0';
+    gsap.fromTo(
+        elem,
+        { x: x, y: y, autoAlpha: 0 },
+        {
+            duration: 1,
+            x: 0,
+            y: 0,
+            autoAlpha: 1,
+            ease: 'expo',
+            overwrite: 'auto',
+        }
+    );
+}
+
+export function hide(elem: HTMLElement) {
+    gsap.set(elem, { autoAlpha: 0 });
+}
+
 export const Section = styled.section<SectionProps>`
     display: ${props => (props.grid ? 'grid' : 'flex')};
     flex-direction: ${props => (props.row ? 'row' : 'column')};
@@ -37,9 +90,7 @@ export const Section = styled.section<SectionProps>`
     }
 
     @media ${props => props.theme.breakpoints.sm} {
-        padding: ${props => (props.nopadding ? '0' : '16px 16px 0')};
-
-        /* width: calc(100vw - 32px); */
+        padding: ${props => (props.nopadding ? '10px 20px' : '16px 16px 0')};
         width: 100vw;
         flex-direction: column;
     }
