@@ -2,26 +2,6 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import styled from 'styled-components';
 
-interface SectionProps {
-    grid?: boolean;
-    row?: boolean;
-    nopadding?: boolean;
-    id?: string;
-}
-
-interface DividerProps {
-    divider?: boolean;
-    colorAlt?: boolean;
-}
-
-interface TitleProps {
-    main?: boolean;
-}
-
-interface ButtonProps {
-    alt?: boolean;
-}
-
 export function loadScrollTrigger() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -73,6 +53,27 @@ export function hide(elem: HTMLElement) {
     gsap.set(elem, { autoAlpha: 0 });
 }
 
+
+interface SectionProps {
+    grid?: boolean;
+    row?: boolean;
+    nopadding?: boolean;
+    id?: string;
+}
+
+interface DividerProps {
+    divider?: boolean;
+    colorAlt?: boolean;
+}
+
+interface TitleProps {
+    main?: boolean;
+}
+
+interface ButtonProps {
+    alt?: boolean;
+}
+
 export const Section = styled.section<SectionProps>`
     display: ${props => (props.grid ? 'grid' : 'flex')};
     flex-direction: ${props => (props.row ? 'row' : 'column')};
@@ -90,7 +91,7 @@ export const Section = styled.section<SectionProps>`
     }
 
     @media ${props => props.theme.breakpoints.sm} {
-        padding: ${props => (props.nopadding ? '10px 20px' : '16px 16px 0')};
+        padding: ${props => (props.nopadding ? '10px 0px' : '16px 16px 0')};
         width: 100vw;
         flex-direction: column;
     }
@@ -124,8 +125,8 @@ export const SectionTitle = styled.h2<TitleProps>`
     @media ${props => props.theme.breakpoints.sm} {
         font-size: 32px;
         line-height: 40px;
-        font-size: ${props => (props.main ? '28px' : '32px')};
-        line-height: ${props => (props.main ? '32px' : '40px')};
+        font-size: ${props => (props.main ? '32px' : '36px')};
+        line-height: ${props => (props.main ? '36px' : '44px')};
         margin-bottom: 8px;
         padding: ${props => (props.main ? '16px 0 8px' : '0')};
         max-width: 100%;
@@ -183,7 +184,7 @@ export const SectionDivider = styled.div<DividerProps>`
             ? props.theme.gradients.primary
             : props.theme.gradients.secondary1};
 
-    margin: ${props => (props.divider ? '3rem 0' : '')};
+    margin: ${props => (props.divider ? '3rem 0.5rem' : '')};
 
     @media ${props => props.theme.breakpoints.md} {
         width: 48px;

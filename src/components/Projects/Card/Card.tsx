@@ -43,7 +43,7 @@ const Card: React.FC<CardProps> = ({
                         setOpenVideo(false);
                     }}
                 >
-                    <span onClick={() => setOpenVideo(!openVideo)}>Hover to preview</span>
+                    <span onClick={() => setOpenVideo(!openVideo)}>Click or Hover to preview</span>
                     {openVideo && (
                         <video src={preview} className="video" autoPlay muted loop />
                     )} 
