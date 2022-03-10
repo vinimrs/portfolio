@@ -11,7 +11,7 @@ import Card from './Card/Card';
 
 const Projects: React.FC = () => {
     return (
-        <Section nopadding id="projects">
+        <Section id="projects">
             <SectionDivider divider />
             <SectionTitle main>Projetos</SectionTitle>
             <CardWrapper>
