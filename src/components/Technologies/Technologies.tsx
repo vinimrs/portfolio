@@ -20,8 +20,8 @@ const Technologies: React.FC = () => {
             <SectionDivider divider />
             <SectionTitle>Tecnologias</SectionTitle>
             <SectionText>
-                Atualmente, acumulo conhecimentos do Front-End, UI/UX e o básico
-                de Banco de Dados.
+                Atualmente, acumulo conhecimentos do Front-End, Back-End, de
+                bases de UI/UX e e de gerenciamento de Bancos de dados.
             </SectionText>
             <List>
                 <ListItem>
