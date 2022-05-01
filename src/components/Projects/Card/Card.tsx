@@ -15,6 +15,7 @@ interface CardProps {
     source?: string;
     visit?: string;
     preview?: string;
+    status?: string;
     tags?: Array<Tags>;
 }
 
@@ -27,11 +28,12 @@ const Card: React.FC<CardProps> = ({
     visit,
     title,
     tags,
+    status,
 }) => {
     const [openVideo, setOpenVideo] = useState(false);
 
     return (
-        <S.CardDiv  key={id} >
+        <S.CardDiv key={id}>
             <S.Card2>
                 <S.CardImage
                     src={image}
@@ -43,24 +45,37 @@ const Card: React.FC<CardProps> = ({
                         setOpenVideo(false);
                     }}
                 >
-                    <span onClick={() => setOpenVideo(!openVideo)}>Click or Hover to preview</span>
+                    <span onClick={() => setOpenVideo(!openVideo)}>
+                        Click or Hover to preview
+                    </span>
                     {openVideo && (
-                        <video src={preview} className="video" autoPlay muted loop />
-                    )} 
+                        <video
+                            src={preview}
+                            className="video"
+                            autoPlay
+                            muted
+                            loop
+                        />
+                    )}
                 </S.CardImage>
                 <div style={{ width: '100%', padding: '24px 18px' }}>
-                    <S.CardTitle>{title}</S.CardTitle>
+                    <S.CardTitleWrapper>
+                        <S.CardTitle>{title}</S.CardTitle>
+                        <S.CardStatus status={status}>{status}</S.CardStatus>
+                    </S.CardTitleWrapper>
                     <S.Text>{description}</S.Text>
-                    <S.LinksDiv>
-                        <S.RepoLink href={source} target="_blank">
-                            <AiFillGithub size="3rem" />
-                            <span>Visualize o código</span>
-                        </S.RepoLink>
-                        <S.RepoLink href={visit} target="_blank">
-                            <AiOutlineGlobal size="3rem" />
-                            <span>Visualize o projeto</span>
-                        </S.RepoLink>
-                    </S.LinksDiv>
+                    {status !== 'Deprecated' && (
+                        <S.LinksDiv>
+                            <S.RepoLink href={source} target="_blank">
+                                <AiFillGithub size="3rem" />
+                                <span>Visualize o código</span>
+                            </S.RepoLink>
+                            <S.RepoLink href={visit} target="_blank">
+                                <AiOutlineGlobal size="3rem" />
+                                <span>Visualize o projeto</span>
+                            </S.RepoLink>
+                        </S.LinksDiv>
+                    )}
                     <div
                         style={{
                             display: 'flex',

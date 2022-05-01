@@ -10,12 +10,14 @@ const Footer: React.FC = () => {
             <S.LinkList>
                 <S.LinkColumn>
                     <S.LinkTitle>Telefone</S.LinkTitle>
-                    <S.LinkItem href="tel:(082)99127-8970">(082) 99127-8970</S.LinkItem>
+                    <S.LinkItem href="tel:(082)99127-8970">
+                        (082) 99127-8970
+                    </S.LinkItem>
                 </S.LinkColumn>
                 <S.LinkColumn>
                     <S.LinkTitle>Email</S.LinkTitle>
-                    <S.LinkItem href="mailto:viniromualdo082@gmail.com">
-                    viniromualdo082@gmail.com
+                    <S.LinkItem href="mailto:viniciusromualdobusiness@gmail.com">
+                        viniciusromualdobusiness@gmail.com
                     </S.LinkItem>
                 </S.LinkColumn>
             </S.LinkList>
