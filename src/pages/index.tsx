@@ -10,21 +10,20 @@ import TimeLine from '../components/TimeLine/TimeLine';
 import Technologies from '../components/Technologies/Technologies';
 
 const Home: React.FC = () => {
-    return (
-        <Layout>
-            <Head>
-                <title>Portfolio - Vini</title>
-            </Head>
-            <Section grid >
-                <Hero />
-                <BackgroundAnimation />
-            </Section>
-            <Projects />
-            <Technologies />
-            <TimeLine />
-        </Layout>
-
-    );
+  return (
+    <Layout>
+      <Head>
+        <title>Portfolio - Vini</title>
+      </Head>
+      <Section grid>
+        <Hero />
+        <BackgroundAnimation />
+      </Section>
+      <Projects />
+      <Technologies />
+      <TimeLine />
+    </Layout>
+  );
 };
 
 export default Home;

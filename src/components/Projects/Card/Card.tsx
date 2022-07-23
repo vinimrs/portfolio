@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import * as S from './CardStyles';
-import {
-  AiFillGithub,
-  AiOutlineGlobal,
-  AiOutlineLoading3Quarters,
-} from 'react-icons/ai';
+import { AiFillGithub, AiOutlineGlobal } from 'react-icons/ai';
 
 interface Tags {
   name?: string;
