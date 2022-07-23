@@ -3,5 +3,5 @@ module.exports = {
     singleQuote: true,
     arrowParens: 'avoid',
     endOfLine: 'auto',
-    tabWidth: 4
-}
+    tabWidth: 2,
+};
