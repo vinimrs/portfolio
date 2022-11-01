@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   reactStrictMode: true,
   compiler: {
@@ -7,10 +8,9 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
-
 const withImages = require('next-images');
 module.exports = withImages({
+  ...nextConfig,
   esModule: true,
 });
 
