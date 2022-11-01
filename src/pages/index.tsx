@@ -8,8 +8,9 @@ import BackgroundAnimation from '../components/BackgroundAnimation/BackgroundAni
 import Projects from '../components/Projects/Projects';
 import TimeLine from '../components/TimeLine/TimeLine';
 import Technologies from '../components/Technologies/Technologies';
+import { ReactFCWithChildren } from '@types';
 
-const Home: React.FC = () => {
+const Home: ReactFCWithChildren = () => {
   return (
     <Layout>
       <Head>

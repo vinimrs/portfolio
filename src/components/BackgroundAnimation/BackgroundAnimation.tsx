@@ -1,6 +1,7 @@
+import { ReactFCWithChildren } from '@types';
 import React from 'react';
 
-const BackgroundAnimation: React.FC = () => (
+const BackgroundAnimation: ReactFCWithChildren = () => (
   <div>
     <svg
       className="BgAnimation__svg"
