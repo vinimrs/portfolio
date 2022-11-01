@@ -11,7 +11,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "gsap": "^3.9.1",
+    "gsap": "^3.11.3",
     "next": "13.0.1",
     "next-images": "^1.8.4",
     "next-react-svg": "^1.1.3",
