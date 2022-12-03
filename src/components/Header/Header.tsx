@@ -8,16 +8,15 @@ const Header: React.FC = () => {
   return (
     <S.Container>
       <S.Div1>
-        <Link href="/">
-          <a
-            style={{
-              color: 'white',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <DiNetbeans size="3rem" /> <span>VinPort</span>
-          </a>
+        <Link
+          href="/"
+          style={{
+            color: 'white',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <DiNetbeans size="3rem" /> <span>VinPort</span>
         </Link>
       </S.Div1>
       <S.Div2>

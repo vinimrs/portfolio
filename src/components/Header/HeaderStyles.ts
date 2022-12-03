@@ -54,6 +54,7 @@ export const Div3 = styled.div`
 `;
 
 export const NavLink = styled.a`
+  color: ${props => props.theme.colors.text};
   font-size: ${props => props.theme.fonts.size.sm2};
   transition: 0.3s all;
   cursor: pointer;
