@@ -28,7 +28,7 @@
 
 ## 📁 Acesso ao projeto
 
-Você pode visualizar a <a href="https://vinport.vercel.app" target="_blank">última versao da aplicação</a> ou seguir o próximo tópico e rodá-la localmente.
+Você pode visualizar a <a href="https://vinport.vercel.app" target="_blank" rel="noopener noreferrer">última versao da aplicação</a> ou seguir o próximo tópico e rodá-la localmente.
 
 ## 🛠 Abrir e rodar o projeto
 
