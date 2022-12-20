@@ -1,43 +1,67 @@
-# Meu site Portifólio 
+<h1>
+   <p> 
+      <img src="https://user-images.githubusercontent.com/92659173/156954210-300f8987-5c54-49a2-a03d-37bd5458340a.svg" width="60" align="center" />
+      VinPort - Meu site de portifólio 
+   </p>
+   <img src="https://img.shields.io/github/license/vinimrs/VinChat?color=black" align="center" />
+</h1>
 
-![logo2](https://user-images.githubusercontent.com/92659173/156954210-300f8987-5c54-49a2-a03d-37bd5458340a.svg)
+**Aplicação web para portifólio pessoal em tecnologias referência na área.**
 
-Projeto de um portifólio pessoal em Typescript e Next.js e Styled components.
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/92659173/157347220-319edda7-6544-4964-b648-5fcb5651e21d.png"  width="450"/>
+   <p align="center">
+      <i>Página inicial - VinPort</i>
+   </p>
+</p>
 
-## Confira 🔦
+## :hammer: Funcionalidades
 
-![print-portfolio](https://user-images.githubusercontent.com/92659173/157347220-319edda7-6544-4964-b648-5fcb5651e21d.png)
+  - `Funcionalidade 1` `Animações`: a aplicação conta com algumas animações que melhoram a UX!
+- `Funcionalidade 2` `Cards`: os meus projetos mais relevantes estão colecionados aqui!
+- `Funcionalidade 3` `Timeline`: confira uma timeline da minha história na programação!
 
-## Tecnologias ⚡
-
+## ⚡ Tecnologias
 
 - [Next.js](https://nextjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 
-## Features :hammer:
+## 📁 Acesso ao projeto
 
-- `Cards animados, com preview`: tudo em um so lugar!
+Você pode visualizar a <a href="https://vinport.vercel.app" target="_blank">última versao da aplicação</a> ou seguir o próximo tópico e rodá-la localmente.
 
-## Como rodar a aplicação :arrow_forward:
+## 🛠 Abrir e rodar o projeto
 
-No terminal, clone o projeto:
-
-```bash
-git clone https://github.com/ViniR07/portfolio.git
-```
-
-Depois disso, você pode ir no repositório e rodar o comando `npm install` para instalar as dependências:
+Primeiro, você deve ter o [`node`](https://nodejs.org/en/) e o [`npm`](https://www.npmjs.com) instalados em sua máquina, confirme executando os seguintes comandos (se houver erro precisa instalá-los):
 
 ```bash
-npm install
+node -v
+npm -v
 ```
-Finalmente, rode o comando  `npm run dev` para iniciar a aplicação:
+
+Agora, navegue até o diretório que o projeto ficará e clone o projeto:
+
+```bash
+git clone https://github.com/vinimrs/portfolio.git
+cd portfolio/
+```
+
+Após isso, instale as dependências do projeto com o comando `npm install` ou `npm i`:
+
+```bash
+npm i
+```
+
+Finalmente, execute o comando `npm run dev` para iniciar a aplicação:
 
 ```bash
 npm run dev
 ```
 
-## Melhorias 🛠
+A aplicação deve estar visível em seu navegador, por padrão, no endereço `http://localhost:3000`.
+
+
+## ✅ Melhorias
 
 Ideias de melhorias para o projeto:
 
