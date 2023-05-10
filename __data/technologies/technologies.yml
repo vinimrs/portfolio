@@ -1,0 +1,11 @@
+brief: Atualmente, acumulo conhecimentos do Front-End, Back-End, de bases de UI/UX e e de gerenciamento de Bancos de dados.
+tecnologies:
+  - title: Front-End
+    description: Experiência com <br /> React.js, Next.js, <br /> Typescript...
+    icon: DiReact
+  - title: Back-End
+    description: Experiência com <br /> NodeJs, Express, <br /> PostgresSQL...
+    icon: DiFirebase
+  - title: UI/UX
+    description: Experiência com <br /> ferramentas como Figma
+    icon: DiZend

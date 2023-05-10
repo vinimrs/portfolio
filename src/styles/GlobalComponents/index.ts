@@ -7,7 +7,6 @@ export function loadScrollTrigger() {
 
   gsap.utils.toArray('#gs_reveal').forEach(function (elem: HTMLElement) {
     hide(elem); // assure that the element is hidden when scrolled into view
-    console.log(elem);
     ScrollTrigger.create({
       trigger: elem,
       onEnter: function () {
