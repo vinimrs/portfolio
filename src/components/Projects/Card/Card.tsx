@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './CardStyles';
 import { AiFillGithub, AiOutlineGlobal } from 'react-icons/ai';
+import Image from 'next/image';
 
 interface Tags {
   name?: string;
@@ -49,13 +50,12 @@ const Card: React.FC<CardProps> = ({
             Click or Hover to preview
           </span>
           {openVideo && (
-            <video
+            <Image
               src={preview}
+              alt="preview"
+              width={300}
+              height={300}
               className="video"
-              autoPlay
-              muted
-              loop
-              poster="loading-cubes.gif"
             />
           )}
         </S.CardImage>
@@ -67,14 +67,18 @@ const Card: React.FC<CardProps> = ({
           <S.Text>{description}</S.Text>
           {status !== 'Deprecated' && (
             <S.LinksDiv>
-              <S.RepoLink href={source} target="_blank">
-                <AiFillGithub size="3rem" />
-                <span>Visualize o código</span>
-              </S.RepoLink>
-              <S.RepoLink href={visit} target="_blank">
-                <AiOutlineGlobal size="3rem" />
-                <span>Visualize o projeto</span>
-              </S.RepoLink>
+              {source ? (
+                <S.RepoLink href={source} target="_blank">
+                  <AiFillGithub size="3rem" />
+                  <span>Visualize o código</span>
+                </S.RepoLink>
+              ) : null}
+              {visit ? (
+                <S.RepoLink href={visit} target="_blank">
+                  <AiOutlineGlobal size="3rem" />
+                  <span>Visite o projeto</span>
+                </S.RepoLink>
+              ) : null}
             </S.LinksDiv>
           )}
           <div

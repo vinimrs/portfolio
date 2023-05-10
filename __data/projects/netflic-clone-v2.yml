@@ -1,19 +1,19 @@
-title: Netflix Clone - V2
-status: New
-description: "Que tal uma maratonada ATUALIZADA? ✅ \n            Vêm comigo conhecer o meu clone da netflix. Agora com suporte para criação de contas e gerenciamento de perfis \U0001F92F. Atualizado para Nextjs com Typescript, ele conta com AINDA MAIS funcionalidades fieis ao site original!"
+title: Netflix Clone
+status: Ativo
+description: "Que tal uma maratonada? ✅ Conheça o meu clone da Netflix.
+  Ele suporta criação de contas e perfis individuais, sugestões e
+  prévias dos filmes e séries em cartaz \U0001F92F."
 image: /images/3.png
 tags:
   - name: NextJs
     link: 'https://nextjs.org/'
   - name: Typescript
     link: 'https://www.typescriptlang.org'
-  - name: Back-End
-    link: 'https://github.com/ViniR07/netflix-backend'
   - name: JWT
     link: 'https://jwt.io'
   - name: NodeJs
     link: 'https://nodejs.org/en/'
-source: 'https://github.com/ViniR07/netflix-clone'
-visit: 'https://netflix-clone-vinir07.vercel.app/'
-preview: /video-netflix-2.mp4
+source: 'https://github.com/vinimrs/netflix-clone'
+visit: 'https://vinflix.vercel.app'
+preview: /videos/netflix-2.gif
 id: 2

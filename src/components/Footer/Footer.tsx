@@ -29,17 +29,17 @@ const Footer: React.FC<{
         </S.CompanyContainer>
         <S.SocialContainer>
           {socialNetworks?.github ? (
-            <SocialIcons href={socialNetworks.github}>
+            <SocialIcons href={socialNetworks.github} target="_blank">
               <AiFillGithub size="3rem" />
             </SocialIcons>
           ) : null}
           {socialNetworks?.linkedin ? (
-            <SocialIcons href={socialNetworks.linkedin}>
+            <SocialIcons href={socialNetworks.linkedin} target="_blank">
               <AiFillLinkedin size="3rem" />
             </SocialIcons>
           ) : null}
           {socialNetworks?.instagram ? (
-            <SocialIcons href={socialNetworks.instagram}>
+            <SocialIcons href={socialNetworks.instagram} target="_blank">
               <AiFillInstagram size="3rem" />
             </SocialIcons>
           ) : null}

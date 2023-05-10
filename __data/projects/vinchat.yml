@@ -1,6 +1,6 @@
 title: VinChat
-status: Version 1
-description: "Criado com Next.js, VinChat é uma plataforma beta de conversas online, com realtime e validação de login. Integrado com o SupaBase, com OAuth do Google e do Github. Converse com mais segurança que no Whatsapp \U0001F60E, você pode enviar figurinhas e textos de multiplas linhas e apagar quando quiser!"
+status: Ativo
+description: 'Conheça minha plataforma beta de conversação online. Nela você pode enviar figurinhas e textos de multiplas linhas e apagar quando quiser!'
 image: /images/2.png
 tags:
   - name: React
@@ -9,7 +9,7 @@ tags:
     link: 'https://nextjs.org/'
   - name: SupaBase
     link: 'https://supabase.com/'
-source: 'https://github.com/ViniR07/VinChat'
+source: 'https://github.com/vinimrs/VinChat'
 visit: 'https://vinchat.vercel.app/'
-preview: /video-vinchat.mp4
+preview: /videos/vinchat.gif
 id: 1

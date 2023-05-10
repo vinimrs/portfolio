@@ -30,4 +30,11 @@ export const projectsServices = {
     const projects = Promise.all(projectsPromise);
     return projects;
   },
+  getActiveProjects: async () => {
+    const projects = await projectsServices.getAll();
+    const currentProjects = projects.filter(
+      project => project.status !== 'Descontinuado'
+    );
+    return currentProjects;
+  },
 };

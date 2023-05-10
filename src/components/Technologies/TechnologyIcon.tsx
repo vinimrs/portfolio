@@ -1,7 +1,5 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
-
-// import { Container } from './styles';
+import { DiFirebase, DiReact, DiTrello, DiZend } from 'react-icons/di';
 
 const TechnologyIcon: React.FC<{ name: string }> = ({ name }) => {
   if (name === 'DiReact') {
@@ -22,6 +20,13 @@ const TechnologyIcon: React.FC<{ name: string }> = ({ name }) => {
     return (
       <picture>
         <DiZend size="3rem" id="gs_reveal" />
+      </picture>
+    );
+  }
+  if (name === 'DiTrello') {
+    return (
+      <picture>
+        <DiTrello size="3rem" id="gs_reveal" />
       </picture>
     );
   }

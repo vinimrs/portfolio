@@ -49,7 +49,7 @@ const Home: React.FC<{
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projects = await projectsServices.getAll();
+  const projects = await projectsServices.getActiveProjects();
   const timelines = await timelineServices.getAll();
   const technologies = await technologiesServices.getAll();
 
