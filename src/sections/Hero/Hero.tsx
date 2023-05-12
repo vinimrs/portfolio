@@ -6,6 +6,7 @@ import {
   ButtonBack,
   loadScrollTrigger,
 } from '../../styles/GlobalComponents';
+import ScrollTo from '../../components/ScrollTo/ScrollTo';
 import { LeftSection } from './HeroStyles';
 
 const Hero: React.FC<{ welcome: string; brief: string }> = ({
@@ -14,7 +15,7 @@ const Hero: React.FC<{ welcome: string; brief: string }> = ({
 }) => {
   useEffect(() => {
     loadScrollTrigger();
-  });
+  }, []);
 
   return (
     <>
@@ -22,7 +23,9 @@ const Hero: React.FC<{ welcome: string; brief: string }> = ({
         <LeftSection>
           <SectionTitle main>{welcome}</SectionTitle>
           <SectionText>{brief}</SectionText>
-          <ButtonBack>Leia Mais</ButtonBack>
+          <ScrollTo itemName="projects">
+            <ButtonBack>Leia Mais</ButtonBack>
+          </ScrollTo>
         </LeftSection>
       </Section>
     </>

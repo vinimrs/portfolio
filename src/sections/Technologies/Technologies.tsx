@@ -19,7 +19,7 @@ const Technologies: React.FC<{ data: TechnologiesI }> = ({ data }) => {
   return (
     <Section id="tech">
       <SectionDivider divider />
-      <SectionTitle>Tecnologias</SectionTitle>
+      <SectionTitle main>Tecnologias</SectionTitle>
       <SectionText>{data.brief}</SectionText>
       <List>
         {data.tecnologies.map(item => (
@@ -32,7 +32,6 @@ const Technologies: React.FC<{ data: TechnologiesI }> = ({ data }) => {
           </ListItem>
         ))}
       </List>
-      <SectionDivider colorAlt />
     </Section>
   );
 };

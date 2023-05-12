@@ -1,4 +1,6 @@
-import React, { useState, useRef, useEffect, MouseEvent } from 'react';
+import React, { MouseEvent, useEffect, useRef, useState } from 'react';
+import { TimeLineData } from '../../../constants';
+import { Timeline } from '../../../services/timelineServices';
 
 import {
   CarouselButton,
@@ -11,18 +13,10 @@ import {
   CarouselItemTitle,
   CarouselMobileScrollNode,
 } from './TimeLineStyles';
-import {
-  Section,
-  SectionDivider,
-  SectionText,
-  SectionTitle,
-} from '../../styles/GlobalComponents';
-import { TimeLineData } from '../../constants';
-import { Timelines } from '../../services/timelineServices';
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
-const Timeline: React.FC<{ data: Timelines }> = ({ data }) => {
+const TimeLine: React.FC<{ timelines: Timeline[] }> = ({ timelines }) => {
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef = useRef<HTMLUListElement>();
 
@@ -66,16 +60,14 @@ const Timeline: React.FC<{ data: Timelines }> = ({ data }) => {
   }, []);
 
   return (
-    <Section id="about">
-      <SectionTitle>Sobre mim</SectionTitle>
-      <SectionText>{data.brief}</SectionText>
+    <>
       <CarouselContainer
         id="gs_reveal"
         ref={carouselRef}
         onScroll={handleScroll}
       >
         <>
-          {data.timelines.map((item, index) => (
+          {timelines.map((item, index) => (
             <CarouselMobileScrollNode
               key={index}
               final={index === TOTAL_CAROUSEL_COUNT - 1}
@@ -142,9 +134,8 @@ const Timeline: React.FC<{ data: Timelines }> = ({ data }) => {
           );
         })}
       </CarouselButtons>
-      <SectionDivider />
-    </Section>
+    </>
   );
 };
 
-export default Timeline;
+export default TimeLine;
