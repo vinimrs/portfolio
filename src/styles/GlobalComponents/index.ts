@@ -76,7 +76,7 @@ export const Section = styled.section<SectionProps>`
   display: ${props => (props.grid ? 'grid' : 'flex')};
   flex-direction: ${props => (props.row ? 'row' : 'column')};
   padding: ${props => (props.nopadding ? '0' : '32px 48px 0')};
-  margin: 0 auto;
+  margin: 42px auto;
   max-width: 1240px;
   box-sizing: content-box;
   position: relative;
@@ -151,6 +151,24 @@ export const SectionText = styled.p`
     line-height: 24px;
     padding-bottom: 16px;
   }
+`;
+
+export const SectionTitle2 = styled.h2`
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 50px;
+  width: max-content;
+  max-width: 700px;
+  background: linear-gradient(
+    121.57deg,
+    #ffffff 18.77%,
+    rgba(255, 255, 255, 0.66) 60.15%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+  padding: 36px 0 16px;
 `;
 
 export const SectionSubText = styled.p`

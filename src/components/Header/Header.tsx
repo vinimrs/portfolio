@@ -4,6 +4,7 @@ import * as S from './HeaderStyles';
 import { DiNetbeans } from 'react-icons/di';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import { TemplateConfig } from '../../services/withTemplateConfig';
+import ScrollTo from '../ScrollTo/ScrollTo';
 
 const Header: React.FC<{
   socialNetworks: TemplateConfig['personal']['socialNetworks'];
@@ -24,19 +25,19 @@ const Header: React.FC<{
       </S.Div1>
       <S.Div2>
         <li>
-          <Link href="#projects">
+          <ScrollTo itemName="projects">
             <S.NavLink>Projetos</S.NavLink>
-          </Link>
+          </ScrollTo>
         </li>
         <li>
-          <Link href="#tech">
+          <ScrollTo itemName="tech">
             <S.NavLink>Tecnologias</S.NavLink>
-          </Link>
+          </ScrollTo>
         </li>
         <li>
-          <Link href="#about">
+          <ScrollTo itemName="about">
             <S.NavLink>Sobre</S.NavLink>
-          </Link>
+          </ScrollTo>
         </li>
       </S.Div2>
       <S.Div3>

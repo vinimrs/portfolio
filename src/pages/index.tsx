@@ -1,13 +1,12 @@
 import React from 'react';
 
 import Layout from '../layout/Layout';
-import Hero from '../components/Hero/Hero';
+import Hero from '../sections/Hero/Hero';
 import Head from 'next/head';
 import { Section } from '../styles/GlobalComponents';
 import BackgroundAnimation from '../components/BackgroundAnimation/BackgroundAnimation';
-import Projects from '../components/Projects/Projects';
-import TimeLine from '../components/TimeLine/TimeLine';
-import Technologies from '../components/Technologies/Technologies';
+import Projects from '../sections/Projects/Projects';
+import Technologies from '../sections/Technologies/Technologies';
 import { GetStaticProps } from 'next';
 import { Project, projectsServices } from '../services/projectsServices';
 import {
@@ -19,7 +18,7 @@ import {
   TechnologiesI,
   technologiesServices,
 } from '../services/technologiesServices';
-import MyStats from '../components/MyStats/MyStats';
+import About from '../sections/About/About';
 
 const Home: React.FC<{
   projects: Project[];
@@ -42,8 +41,7 @@ const Home: React.FC<{
       </Section>
       <Projects projects={projects} />
       <Technologies data={technologies} />
-      <MyStats />
-      <TimeLine data={timelines} />
+      <About data={timelines} />
     </Layout>
   );
 };
