@@ -19,6 +19,7 @@ import {
   TechnologiesI,
   technologiesServices,
 } from '../services/technologiesServices';
+import MyStats from '../components/MyStats/MyStats';
 
 const Home: React.FC<{
   projects: Project[];
@@ -41,6 +42,7 @@ const Home: React.FC<{
       </Section>
       <Projects projects={projects} />
       <Technologies data={technologies} />
+      <MyStats />
       <TimeLine data={timelines} />
     </Layout>
   );
