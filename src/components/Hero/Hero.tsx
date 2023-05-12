@@ -8,7 +8,10 @@ import {
 } from '../../styles/GlobalComponents';
 import { LeftSection } from './HeroStyles';
 
-const Hero: React.FC = () => {
+const Hero: React.FC<{ welcome: string; brief: string }> = ({
+  welcome,
+  brief,
+}) => {
   useEffect(() => {
     loadScrollTrigger();
   });
@@ -17,15 +20,8 @@ const Hero: React.FC = () => {
     <>
       <Section row nopadding>
         <LeftSection>
-          <SectionTitle main>
-            Fala aí! <br />
-            Bem-Vindo(a) ao meu Portfolio
-          </SectionTitle>
-          <SectionText>
-            Meu nome é Vinícius, sou Desenvolvedor Web, e aqui você irá
-            encontrar meus projetos mais relevantes e um pouco sobre minha
-            história!
-          </SectionText>
+          <SectionTitle main>{welcome}</SectionTitle>
+          <SectionText>{brief}</SectionText>
           <ButtonBack>Leia Mais</ButtonBack>
         </LeftSection>
       </Section>

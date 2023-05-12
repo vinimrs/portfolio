@@ -18,10 +18,11 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 import { TimeLineData } from '../../constants';
+import { Timelines } from '../../services/timelineServices';
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
-const Timeline: React.FC = () => {
+const Timeline: React.FC<{ data: Timelines }> = ({ data }) => {
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef = useRef<HTMLUListElement>();
 
@@ -67,19 +68,14 @@ const Timeline: React.FC = () => {
   return (
     <Section id="about">
       <SectionTitle>Sobre mim</SectionTitle>
-      <SectionText>
-        Posso falar que sou a pessoa mais curiosa que conheço, desde que conheci
-        esse mundo a cada dia fico mais apaixonado e motivado a continuar me
-        aprimorando! Meu maior objetivo é aplicar meus conhecimentos em projetos
-        práticos, igual esse aqui.
-      </SectionText>
+      <SectionText>{data.brief}</SectionText>
       <CarouselContainer
         id="gs_reveal"
         ref={carouselRef}
         onScroll={handleScroll}
       >
         <>
-          {TimeLineData.map((item, index) => (
+          {data.timelines.map((item, index) => (
             <CarouselMobileScrollNode
               key={index}
               final={index === TOTAL_CAROUSEL_COUNT - 1}

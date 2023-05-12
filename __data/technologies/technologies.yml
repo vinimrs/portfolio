@@ -1,0 +1,15 @@
+brief: Atualmente, detenho conhecimentos de desenvolvimento Front-End, Back-End,
+  UI/UX, Mobile e de processos de Metodologias Ágeis.
+tecnologies:
+  - title: Front-End
+    description: Experiência com React.js, Next.js, Typescript...
+    icon: DiReact
+  - title: Back-End
+    description: Experiência com NodeJs, Express, PostgresSQL...
+    icon: DiFirebase
+  - title: UI/UX
+    description: Experiência com Figma, processos de design e avaliação...
+    icon: DiZend
+  - title: Ágeis
+    description: Experiência com eXtreme Programming, Kanban e Scrum.
+    icon: DiTrello

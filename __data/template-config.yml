@@ -1,0 +1,12 @@
+site:
+  title: 'Portfólio - Vini'
+  description: 'Bem-Vindo(a) ao meu Portfólio'
+personal:
+  welcome: 'Fala aí! Bem-Vindo(a) ao meu Portfólio'
+  brief: 'Me chamo Vinícius e aqui você irá encontrar meus projetos de software mais relevantes e um pouco sobre minha história!'
+  phone: '(082) 99127-8970'
+  email: 'viniciusromualdobusiness@gmail.com'
+  footerQuote: 'Inovando um projeto de cada vez'
+  socialNetworks:
+    github: 'https://github.com/vinimrs'
+    linkedin: 'https://www.linkedin.com/in/vinícius-romualdo-5a9555219/'

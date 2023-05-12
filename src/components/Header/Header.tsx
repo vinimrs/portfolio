@@ -3,8 +3,11 @@ import React from 'react';
 import * as S from './HeaderStyles';
 import { DiNetbeans } from 'react-icons/di';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { TemplateConfig } from '../../services/withTemplateConfig';
 
-const Header: React.FC = () => {
+const Header: React.FC<{
+  socialNetworks: TemplateConfig['personal']['socialNetworks'];
+}> = ({ socialNetworks }) => {
   return (
     <S.Container>
       <S.Div1>
@@ -37,15 +40,21 @@ const Header: React.FC = () => {
         </li>
       </S.Div2>
       <S.Div3>
-        <S.SocialIcons href="https://github.com/vinir07">
-          <AiFillGithub size="2.5rem" />
-        </S.SocialIcons>
-        <S.SocialIcons href="https://www.linkedin.com/in/vin%C3%ADcius-romualdo-5a9555219/">
-          <AiFillLinkedin size="2.5rem" />
-        </S.SocialIcons>
-        <S.SocialIcons href="https://instagram.com/vocedeveloper">
-          <AiFillInstagram size="2.5rem" />
-        </S.SocialIcons>
+        {socialNetworks?.github ? (
+          <S.SocialIcons href={socialNetworks.github} target="_blank">
+            <AiFillGithub size="2.5rem" />
+          </S.SocialIcons>
+        ) : null}
+        {socialNetworks?.linkedin ? (
+          <S.SocialIcons href={socialNetworks.linkedin} target="_blank">
+            <AiFillLinkedin size="2.5rem" />
+          </S.SocialIcons>
+        ) : null}
+        {socialNetworks?.instagram ? (
+          <S.SocialIcons href={socialNetworks.instagram} target="_blank">
+            <AiFillInstagram size="2.5rem" />
+          </S.SocialIcons>
+        ) : null}
       </S.Div3>
     </S.Container>
   );

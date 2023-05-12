@@ -1,0 +1,16 @@
+title: Robô do DC
+status: Ativo
+description: Sistema computacional interativo para o robô do Departamento
+  de Computação (DC-UFSCar). Está voltado para o papel de anfitrião, fornecendo informações e funcionalidades
+  relevantes para os usuários do DC.
+image: /images/robodc.png
+tags:
+  - name: React Native
+    link: 'https://reactnative.dev/'
+  - name: Typescript
+    link: 'https://www.typescriptlang.org'
+  - name: Jest
+    link: 'https://jestjs.io/'
+source: 'https://github.com/vinimrs/robo-dc'
+preview: /videos/robodc.gif
+id: 3

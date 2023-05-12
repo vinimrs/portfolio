@@ -1,5 +1,5 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { TechnologiesI } from '../../services/technologiesServices';
 import {
   Section,
   SectionDivider,
@@ -13,55 +13,24 @@ import {
   ListParagraph,
   ListTitle,
 } from './TechnologiesStyles';
+import TechnologyIcon from './TechnologyIcon';
 
-const Technologies: React.FC = () => {
+const Technologies: React.FC<{ data: TechnologiesI }> = ({ data }) => {
   return (
     <Section id="tech">
       <SectionDivider divider />
       <SectionTitle>Tecnologias</SectionTitle>
-      <SectionText>
-        Atualmente, acumulo conhecimentos do Front-End, Back-End, de bases de
-        UI/UX e e de gerenciamento de Bancos de dados.
-      </SectionText>
+      <SectionText>{data.brief}</SectionText>
       <List>
-        <ListItem>
-          <picture>
-            <DiReact size="3rem" id="gs_reveal" />
-          </picture>
-          <ListContainer id="gs_reveal">
-            <ListTitle id="gs_reveal">Front-End</ListTitle>
-            <ListParagraph id="gs_reveal">
-              Experiência com <br />
-              React.js, Next.js, <br />
-              Typescript...
-            </ListParagraph>
-          </ListContainer>
-        </ListItem>
-        <ListItem>
-          <picture>
-            <DiFirebase size="3rem" id="gs_reveal" />
-          </picture>
-          <ListContainer id="gs_reveal">
-            <ListTitle id="gs_reveal">Back-End</ListTitle>
-            <ListParagraph id="gs_reveal">
-              Experiência com <br />
-              NodeJs, Express, <br />
-              PostgresSQL...
-            </ListParagraph>
-          </ListContainer>
-        </ListItem>
-        <ListItem>
-          <picture>
-            <DiZend size="3rem" id="gs_reveal" />
-          </picture>
-          <ListContainer id="gs_reveal">
-            <ListTitle id="gs_reveal">UI/UX</ListTitle>
-            <ListParagraph id="gs_reveal">
-              Experiência com <br />
-              ferramentas como Figma
-            </ListParagraph>
-          </ListContainer>
-        </ListItem>
+        {data.tecnologies.map(item => (
+          <ListItem key={item.icon}>
+            <TechnologyIcon name={item.icon} />
+            <ListContainer id="gs_reveal">
+              <ListTitle id="gs_reveal">{item.title}</ListTitle>
+              <ListParagraph id="gs_reveal">{item.description}</ListParagraph>
+            </ListContainer>
+          </ListItem>
+        ))}
       </List>
       <SectionDivider colorAlt />
     </Section>

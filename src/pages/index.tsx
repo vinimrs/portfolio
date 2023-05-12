@@ -8,23 +8,58 @@ import BackgroundAnimation from '../components/BackgroundAnimation/BackgroundAni
 import Projects from '../components/Projects/Projects';
 import TimeLine from '../components/TimeLine/TimeLine';
 import Technologies from '../components/Technologies/Technologies';
-import { ReactFCWithChildren } from '@types';
+import { GetStaticProps } from 'next';
+import { Project, projectsServices } from '../services/projectsServices';
+import {
+  TemplateConfig,
+  withTemplateConfig,
+} from '../services/withTemplateConfig';
+import { Timelines, timelineServices } from '../services/timelineServices';
+import {
+  TechnologiesI,
+  technologiesServices,
+} from '../services/technologiesServices';
+import MyStats from '../components/MyStats/MyStats';
 
-const Home: ReactFCWithChildren = () => {
+const Home: React.FC<{
+  projects: Project[];
+  technologies: TechnologiesI;
+  timelines: Timelines;
+  templateConfig: TemplateConfig;
+}> = ({ projects, templateConfig, technologies, timelines }) => {
   return (
-    <Layout>
+    <Layout templateConfig={templateConfig}>
       <Head>
-        <title>Portfolio - Vini</title>
+        <title>{templateConfig.site.title}</title>
+        <meta name="description" content={templateConfig.site.description} />
       </Head>
       <Section grid>
-        <Hero />
+        <Hero
+          brief={templateConfig.personal.brief}
+          welcome={templateConfig.personal.welcome}
+        />
         <BackgroundAnimation />
       </Section>
-      <Projects />
-      <Technologies />
-      <TimeLine />
+      <Projects projects={projects} />
+      <Technologies data={technologies} />
+      <MyStats />
+      <TimeLine data={timelines} />
     </Layout>
   );
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const projects = await projectsServices.getActiveProjects();
+  const timelines = await timelineServices.getAll();
+  const technologies = await technologiesServices.getAll();
+
+  return {
+    props: await withTemplateConfig({
+      projects,
+      timelines,
+      technologies,
+    }),
+  };
+};

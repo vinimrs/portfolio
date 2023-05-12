@@ -1,0 +1,17 @@
+title: Netflix Clone
+status: Descontinuado
+description: "Que tal uma maratonada? \n            Vêm comigo conhecer o meu clone da netflix. Com a diferença que o meu é grátis \U0001F602. Criado com React e JS puro, ele conta com várias features fieis ao site original! Dentre elas, a escolha de um perfil, preferências, preview do título, mais informações e mais..."
+image: /images/1.png
+tags:
+  - name: React
+    link: 'https://reactjs.org/'
+  - name: Context Api
+    link: '#'
+  - name: Frame
+    link: '#'
+  - name: JavaScript
+    link: 'https://www.javascript.com/'
+source: 'https://github.com/ViniR07/netflix-clone'
+visit: 'https://netflix-clone-vinir07.vercel.app/'
+preview: /videos/netflix-2.gif
+id: 0

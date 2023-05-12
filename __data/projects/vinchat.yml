@@ -1,0 +1,15 @@
+title: VinChat
+status: Ativo
+description: 'Conheça minha plataforma beta de conversação online. Nela você pode enviar figurinhas e textos de multiplas linhas e apagar quando quiser!'
+image: /images/2.png
+tags:
+  - name: React
+    link: 'https://reactjs.org/'
+  - name: NextJs
+    link: 'https://nextjs.org/'
+  - name: SupaBase
+    link: 'https://supabase.com/'
+source: 'https://github.com/vinimrs/VinChat'
+visit: 'https://vinchat.vercel.app/'
+preview: /videos/vinchat.gif
+id: 1
