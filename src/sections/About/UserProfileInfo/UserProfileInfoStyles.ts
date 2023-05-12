@@ -18,7 +18,7 @@ export const ProfileImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
-  border: 10px solid #6a2aea;
+  border: 10px solid #4364f7;
   border-radius: 50%;
   width: 160px;
   height: 160px;
@@ -31,7 +31,7 @@ export const ProfileImageContainer = styled.div`
 export const Username = styled.a`
   font-size: 22px;
   font-weight: 700;
-  color: #6a2aea;
+  color: #4364f7;
   margin-bottom: 8px;
   text-decoration: none;
 
@@ -65,7 +65,7 @@ export const Stat = styled.div`
 export const StatNumber = styled.span`
   font-size: 24px;
   font-weight: 700;
-  color: #6a2aea;
+  color: #4364f7;
   margin-bottom: 6px;
 
   @media (max-width: 768px) {
@@ -76,7 +76,7 @@ export const StatNumber = styled.span`
 export const StatTitle = styled.span`
   font-size: 16px;
   font-weight: 500;
-  color: #6a2aea;
+  color: #4364f7;
 
   @media (max-width: 768px) {
     font-size: 14px;
