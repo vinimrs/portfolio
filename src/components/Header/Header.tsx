@@ -23,7 +23,7 @@ const Header: React.FC<{
           <DiNetbeans size="3rem" /> <span>VinPort</span>
         </Link>
       </S.Div1>
-      <S.Div2>
+      <S.Nav>
         <li>
           <ScrollTo itemName="projects">
             <S.NavLink>Projetos</S.NavLink>
@@ -39,7 +39,7 @@ const Header: React.FC<{
             <S.NavLink>Sobre</S.NavLink>
           </ScrollTo>
         </li>
-      </S.Div2>
+      </S.Nav>
       <S.Div3>
         {socialNetworks?.github ? (
           <S.SocialIcons href={socialNetworks.github} target="_blank">

@@ -34,11 +34,9 @@ const Card: React.FC<CardProps> = ({
   const [openVideo, setOpenVideo] = useState(false);
 
   return (
-    <S.CardDiv key={id}>
+    <S.Container key={id}>
       <S.Card2>
-        <S.CardImage
-          src={image}
-          role="img"
+        <S.Figure
           onMouseEnter={() => {
             setOpenVideo(true);
           }}
@@ -46,20 +44,18 @@ const Card: React.FC<CardProps> = ({
             setOpenVideo(false);
           }}
         >
-          <span onClick={() => setOpenVideo(!openVideo)}>
+          <Image
+            src={openVideo ? preview : image}
+            alt={`${openVideo ? 'preview' : 'image'} of ${title}`}
+            width={300}
+            height={300}
+            className="video"
+          />
+          <figcaption onClick={() => setOpenVideo(!openVideo)}>
             Click or Hover to preview
-          </span>
-          {openVideo && (
-            <Image
-              src={preview}
-              alt="preview"
-              width={300}
-              height={300}
-              className="video"
-            />
-          )}
-        </S.CardImage>
-        <div style={{ width: '100%', padding: '24px 18px' }}>
+          </figcaption>
+        </S.Figure>
+        <S.Body>
           <S.CardTitleWrapper>
             <S.CardTitle>{title}</S.CardTitle>
             <S.CardStatus status={status}>{status}</S.CardStatus>
@@ -94,9 +90,9 @@ const Card: React.FC<CardProps> = ({
               </S.TagLink>
             ))}
           </div>
-        </div>
+        </S.Body>
       </S.Card2>
-    </S.CardDiv>
+    </S.Container>
   );
 };
 

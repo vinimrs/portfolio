@@ -13,7 +13,7 @@ const Footer: React.FC<{
 }> = ({ socialNetworks, email, footerQuote, phone }) => {
   return (
     <S.FooterWrapper>
-      <S.LinkList>
+      <S.Address>
         <S.LinkColumn>
           <S.LinkTitle>Telefone</S.LinkTitle>
           <S.LinkItem href={`tel:${phone}`}>{phone}</S.LinkItem>
@@ -22,7 +22,7 @@ const Footer: React.FC<{
           <S.LinkTitle>Email</S.LinkTitle>
           <S.LinkItem href={`mailto:${email}`}>{email}</S.LinkItem>
         </S.LinkColumn>
-      </S.LinkList>
+      </S.Address>
       <S.SocialIconsContainer>
         <S.CompanyContainer>
           <S.Slogan>{footerQuote}</S.Slogan>

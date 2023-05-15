@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CardDiv = styled.div`
+export const Container = styled.article`
   max-width: 550px;
   background-image: ${props => props.theme.gradients.secondary1};
   border-radius: 20px;
@@ -40,7 +40,7 @@ export const Card2 = styled.div`
   }
 `;
 
-export const CardImage = styled.div<{ src: string }>`
+export const Figure = styled.figure<{ src?: string }>`
   width: 100%;
   height: 300px;
   position: relative;
@@ -60,7 +60,7 @@ export const CardImage = styled.div<{ src: string }>`
     background-color: #000;
   }
 
-  span {
+  figcaption {
     position: absolute;
     bottom: 10px;
     transition: 0.3s all;
@@ -98,6 +98,11 @@ export const CardImage = styled.div<{ src: string }>`
       }
     }
   }
+`;
+
+export const Body = styled.div`
+  padding: 24px 18px;
+  width: 100%;
 `;
 
 export const CardTitleWrapper = styled.div`

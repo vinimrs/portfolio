@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.header`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
@@ -32,7 +32,7 @@ export const Div1 = styled.div`
   }
 `;
 
-export const Div2 = styled.div`
+export const Nav = styled.nav`
   grid-area: 1 / 2 / span 1 / span 2;
   display: flex;
   justify-content: space-evenly;
